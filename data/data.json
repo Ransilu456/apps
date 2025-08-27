@@ -1,0 +1,101 @@
+[
+  {
+    "title": "ත්‍රිපිටක ප්‍රවේශ පරීක්ෂණය",
+    "categories": [
+      {
+        "name": "Dharma Knowledge",
+        "papers": [
+          "Dharma Paper 2018",
+          "Dharma Paper 2019",
+          "Dharma Paper 2020",
+          "Dharma Paper 2018",
+          "Dharma Paper 2019",
+          "Dharma Paper 2020",
+          "Dharma Paper 2018",
+          "Dharma Paper 2019",
+          "Dharma Paper 2020",
+          "Dharma Paper 2018",
+          "Dharma Paper 2019",
+          "Dharma Paper 2020",
+          "Dharma Paper 2018",
+          "Dharma Paper 2019",
+          "Dharma Paper 2020"
+        ]
+      },
+      {
+        "name": "Disciple Knowledge",
+        "papers": [
+          "Disciple Paper 2018",
+          "Disciple Paper 2019",
+          "Disciple Paper 2020"
+        ]
+      },
+      {
+        "name": "Normal Knowledge",
+        "papers": [
+          "Normal Paper 2018",
+          "Normal Paper 2019",
+          "Normal Paper 2020"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "ත්‍රිපිටකාචාර්ය උපාධි පරීක්ෂණය",
+    "categories": [
+      {
+        "name": "Saddharmacharya",
+        "papers": [
+          "Saddharmacharya Paper 2018",
+          "Saddharmacharya Paper 2019",
+          "Saddharmacharya Paper 2020"
+        ]
+      },
+      {
+        "name": "Vinayacharaya",
+        "papers": [
+          "Vinayacharaya Paper 2018",
+          "Vinayacharaya Paper 2019",
+          "Vinayacharaya Paper 2020"
+        ]
+      },
+      {
+        "name": "Abhidharmacharaya",
+        "papers": [
+          "Abhidharmacharaya Paper 2018",
+          "Abhidharmacharaya Paper 2019",
+          "Abhidharmacharaya Paper 2020"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "ත්‍රිපිටක විශාරද උපාධි පරීක්ෂණව",
+    "categories": [
+      {
+        "name": "Saddharmacharya",
+        "papers": [
+          "Saddharmacharya Paper 2018",
+          "Saddharmacharya Paper 2019",
+          "Saddharmacharya Paper 2020"
+        ]
+      },
+      {
+        "name": "Vinayacharaya",
+        "papers": [
+          "Vinayacharaya Paper 2018",
+          "Vinayacharaya Paper 2019",
+          "Vinayacharaya Paper 2020"
+        ]
+      },
+      {
+        "name": "Abhidharmacharaya",
+        "papers": [
+          "Abhidharmacharaya Paper 2018",
+          "Abhidharmacharaya Paper 2019",
+          "Abhidharmacharaya Paper 2020"
+        ]
+      }
+    ]
+  }
+]
