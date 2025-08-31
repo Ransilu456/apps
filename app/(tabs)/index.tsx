@@ -1,23 +1,31 @@
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { Pressable, StyleSheet, TextInput, KeyboardAvoidingView, Platform, View } from 'react-native';
+import { Pressable, StyleSheet, KeyboardAvoidingView, Platform, View, ScrollView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import React, { useState, useMemo } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { Picker } from '@react-native-picker/picker';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import examsDataRaw from '../../data/data.json';
 import CustomButton from '@/components/custom/CustomButton';
 
 type ExamCategory = {
   name: string;
-  papers: string[];
+  papers: Paper[];
 };
 
 type Exam = {
   title: string;
   categories: ExamCategory[];
+};
+
+type Paper = {
+  part: number;
+  year: number;
+  paper_title: string;
+  link: string;
 };
 
 const examsData = examsDataRaw as Exam[];
@@ -27,9 +35,9 @@ export default function HomeScreen() {
   const [selectedExam, setSelectedExam] = useState<string>(examsData[0]?.title ?? '');
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [selectedPaper, setSelectedPaper] = useState<string>('');
+  const [selectedPaperLink, setSelectedPaperLink] = useState<string>('');
   const router = useRouter();
 
-  // Filter exams based on search
   const filteredExams = useMemo(() => {
     if (!searchText.trim()) return examsData;
     return examsData.filter(exam =>
@@ -37,122 +45,156 @@ export default function HomeScreen() {
     );
   }, [searchText]);
 
-  // Get selected exam object
   const selectedExamObj = examsData.find(e => e.title === selectedExam);
   const categories = selectedExamObj?.categories ?? [];
   const papers = categories.find(c => c.name === selectedCategory)?.papers ?? [];
+  const selectedPaperObj = papers.find(p => p.link === selectedPaperLink);
 
   return (
     <LinearGradient colors={['#F7F4EF', '#ffeac6ff']} style={{ flex: 1 }}>
-      <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-        <ThemedView style={styles.headerContainer}>
-          <Pressable onPress={() => router.push('/_sitemap')} style={styles.backButton}>
-            <Ionicons name="arrow-back" size={28} color="#2E2E2E" />
-          </Pressable>
-        </ThemedView>
+      <SafeAreaView style={{ flex: 1 }}>
+        <KeyboardAvoidingView
+          style={{ flex: 1 }}
+          behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        >
+          <ScrollView
+            contentContainerStyle={{ flexGrow: 1 }}
+            keyboardShouldPersistTaps="handled"
+          >
+            <ThemedView style={styles.headerContainer}>
+              <Pressable onPress={() => router.push('/_sitemap')} style={styles.backButton}>
+                <Ionicons name="arrow-back" size={28} color="#2E2E2E" />
+              </Pressable>
+            </ThemedView>
 
-        <Ionicons name="leaf" size={100} color="rgba(255, 166, 1, 0.1)" style={styles.leafIcon} />
+            <Ionicons name="leaf" size={100} color="rgba(255, 166, 1, 0.1)" style={styles.leafIcon} />
 
-        <ThemedView style={styles.container}>
-          <ThemedText style={styles.title}>ශ්‍රී ලංකා ත්‍රිපිටක විභාගයට අදාළ ප්‍රශ්න පත්‍ර</ThemedText>
+            <ThemedView style={styles.container}>
+              <ThemedText style={styles.title}>
+                ශ්‍රී ලංකා ත්‍රිපිටක විභාගයට අදාළ ප්‍රශ්න පත්‍ර
+              </ThemedText>
 
-          {/* Search Bar 
-          <ThemedView style={styles.searchContainer}>
-            <TextInput
-              style={styles.searchInput}
-              placeholder="සෙවීම (2018-2025)......"
-              placeholderTextColor="#999"
-              value={searchText}
-              onChangeText={setSearchText}
-            />
-            <Pressable onPress={() => console.log('Search:', searchText)} style={styles.searchBtn}>
-              <Ionicons name="search" size={24} color="#666" />
-            </Pressable>
-          </ThemedView>*/}
+              <ThemedView style={styles.section}>
+                <ThemedText style={styles.sectionTitle}>ඔබගේ විභාගය තෝරන්න</ThemedText>
 
-          <ThemedView style={styles.section}>
-            <ThemedText style={styles.sectionTitle}>ඔබගේ විභාගය තෝරන්න</ThemedText>
+                {/* Exam Dropdown */}
+                <View style={styles.dropdownWrapper}>
+                  <Picker
+                    selectedValue={selectedExam}
+                    onValueChange={(itemValue: string) => {
+                      setSelectedExam(itemValue);
+                      setSelectedCategory('');
+                      setSelectedPaper('');
+                    }}
+                    style={styles.dropdown}
+                  >
+                    {filteredExams.map((exam, index) => (
+                      <Picker.Item key={index} label={exam.title} value={exam.title} />
+                    ))}
+                  </Picker>
+                </View>
 
-            {/* Exam Dropdown */}
-            <View style={styles.dropdownWrapper}>
-              <Picker
-                selectedValue={selectedExam}
-                onValueChange={(itemValue: string) => {
-                  setSelectedExam(itemValue);
-                  setSelectedCategory('');
-                  setSelectedPaper('');
-                }}
-                style={styles.dropdown}
-              >
-                {filteredExams.map((exam, index) => (
-                  <Picker.Item key={index} label={exam.title} value={exam.title} />
-                ))}
-              </Picker>
-            </View>
+                {/* Category Dropdown */}
+                <View style={styles.dropdownWrapper}>
+                  <Picker
+                    selectedValue={selectedCategory}
+                    onValueChange={(itemValue: string) => {
+                      setSelectedCategory(itemValue);
+                      setSelectedPaper('');
+                    }}
+                    style={styles.dropdown}
+                  >
+                    <Picker.Item label="Select Category..." value="" />
+                    {categories.map((cat, index) => (
+                      <Picker.Item key={index} label={cat.name} value={cat.name} />
+                    ))}
+                  </Picker>
+                </View>
 
-            {/* Category Dropdown */}
-              <View style={styles.dropdownWrapper}>
-                <Picker
-                  selectedValue={selectedCategory}
-                  onValueChange={(itemValue: string) => {
-                    setSelectedCategory(itemValue);
-                    setSelectedPaper('');
+                {/* Paper Dropdown */}
+                <View style={styles.dropdownWrapper}>
+                  <Picker
+                    selectedValue={selectedPaperLink}
+                    onValueChange={(itemValue: string) => setSelectedPaperLink(itemValue)}
+                    style={styles.dropdown}
+                  >
+                    <Picker.Item label="Select Paper..." value="" />
+                    {papers.map((paper, index) => (
+                      <Picker.Item key={index} label={`${paper.paper_title}`} value={paper.link} />
+                    ))}
+                  </Picker>
+                </View>
+
+                {/* Optional Part Selector */}
+                <View>
+                  {papers.some(paper => paper.part) && (
+                    <Picker
+                      selectedValue={selectedPaper}
+                      onValueChange={(itemValue: string) => setSelectedPaper(itemValue)}
+                      style={styles.dropdown}
+                    >
+                      <Picker.Item label="Select Part..." value="" />
+                      {papers
+                        .filter(p => p.part)
+                        .map((paper, index) => (
+                          <Picker.Item
+                            key={index}
+                            label={`${paper.paper_title} (Part ${paper.part})`}
+                            value={paper.part.toString()}
+                          />
+                        ))}
+                    </Picker>
+                  )}
+                </View>
+
+                {/* Selected Info */}
+                <ThemedText
+                  style={{
+                    marginTop: 20,
+                    textAlign: 'center',
+                    fontSize: 16,
+                    color: '#4B5563',
                   }}
-                  style={styles.dropdown}
                 >
-                  <Picker.Item label="Select Category..." value="" />
-                  {categories.map((cat, index) => (
-                    <Picker.Item key={index} label={cat.name} value={cat.name} />
-                  ))}
-                </Picker>
-              </View>
-        
-            {/* Paper Dropdown */}
-              <View style={styles.dropdownWrapper}>
-                <Picker
-                  selectedValue={selectedPaper}
-                  onValueChange={(itemValue: string) => setSelectedPaper(itemValue)}
-                  style={styles.dropdown}
-                >
-                  <Picker.Item label="Select Paper..." value="" />
-                  {papers.map((paper, index) => (
-                    <Picker.Item key={index} label={paper} value={paper} />
-                  ))}
-                </Picker>
-              </View>
-       
+                  {selectedExam && selectedCategory && selectedPaperObj
+                    ? `ඔබ තෝරාගත්තේ: ${selectedExam} → ${selectedCategory} → ${selectedPaperObj.year} - ${selectedPaperObj.paper_title}`
+                    : 'කරුණාකර සියල්ල තෝරන්න'}
+                </ThemedText>
 
-            {/* Selected Info */}
-            <ThemedText style={{ marginTop: 20, textAlign: 'center', fontSize: 16 }}>
-              {selectedExam && selectedCategory && selectedPaper
-                ? `ඔබ තෝරාගත්තේ: ${selectedExam} → ${selectedCategory} → ${selectedPaper}`
-                : "කරුණාකර සියල්ල තෝරන්න"}
-            </ThemedText>
-
-            {/* Next Button */}
-            <CustomButton
-              title="Next"
-              style={{ marginTop: 20 }}
-              pressedStyle={{ backgroundColor: '#000000' }}
-              onPress={() => {
-                if (selectedExam && selectedCategory && selectedPaper) {
-                  router.push({
-                    pathname: '/paper',
-                    params: {
-                      exam: selectedExam,
-                      category: selectedCategory,
-                      paper: selectedPaper,
-                    },
-                  });
-                } else {
-                  alert('කරුණාකර විභාගය, කාණ්ඩය, සහ පත්‍රය තෝරන්න.');
-                }
-              }}
-            />
-          </ThemedView>
-
-        </ThemedView>
-      </KeyboardAvoidingView>
+                {/* Next Button */}
+                <CustomButton
+                  title="Next"
+                  icon={
+                    <Ionicons
+                      name="arrow-forward"
+                      size={20}
+                      color="#fff"
+                      style={{ marginRight: 8 }}
+                    />
+                  }
+                  style={{ marginTop: 20 }}
+                  pressedStyle={{ backgroundColor: '#000000' }}
+                  onPress={() => {
+                    if (selectedExam && selectedCategory && selectedPaperObj) {
+                      router.push({
+                        pathname: '/paper',
+                        params: {
+                          exam: selectedExam,
+                          category: selectedCategory,
+                          paperTitle: selectedPaperObj.paper_title,
+                          paperLink: selectedPaperObj.link,
+                        },
+                      });
+                    } else {
+                      alert('කරුණාකර විභාගය, කාණ්ඩය, සහ පත්‍රය තෝරන්න.');
+                    }
+                  }}
+                />
+              </ThemedView>
+            </ThemedView>
+          </ScrollView>
+        </KeyboardAvoidingView>
+      </SafeAreaView>
     </LinearGradient>
   );
 }
@@ -161,6 +203,9 @@ const styles = StyleSheet.create({
   headerContainer: {
     paddingTop: 0,
     paddingHorizontal: 16,
+    marginTop: Platform.OS === 'ios' ? 10 : 10,
+    marginBottom: 10,
+    flexDirection: 'row',
     backgroundColor: 'transparent',
   },
   backButton: {
@@ -190,33 +235,6 @@ const styles = StyleSheet.create({
   section: {
     marginTop: 80,
     backgroundColor: 'transparent',
-  },
-  searchContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    marginTop: 10,
-    marginBottom: 20,
-    paddingHorizontal: 12,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.08,
-    shadowRadius: 3,
-    elevation: 3,
-  },
-  searchInput: {
-    flex: 1,
-    paddingVertical: 12,
-    fontSize: 16,
-    color: '#1F2937',
-    borderRadius: 12,
-  },
-  searchBtn: {
-    marginLeft: 8,
-    padding: 8,
-    borderRadius: 8,
-    backgroundColor: 'rgba(0,0,0,0.05)',
   },
   sectionTitle: {
     fontSize: 20,

@@ -38,7 +38,7 @@ export default function App() {
 
             {/* --- Button --- */}
             <ThemedView style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center', marginBottom: 0, backgroundColor: 'transparent' }}>
-                <CustomButton title="ආරම්භ කරන්න" style={{ backgroundColor: '#F4B400' }} pressedStyle={{ backgroundColor: '#F48400' }} onPress={() => router.replace('/(tabs)')} />
+                <CustomButton title="ආරම්භ කරන්න" icon={<Ionicons name="apps-outline" size={20} color="#FFF" style={{ marginRight: 8 }}/>} style={{ backgroundColor: '#F4B400' }} pressedStyle={{ backgroundColor: '#F48400' }} onPress={() => router.replace('/(tabs)')} />
             </ThemedView>
 
             {/* --- Footer --- */}

@@ -3,39 +3,121 @@
     "title": "ත්‍රිපිටක ප්‍රවේශ පරීක්ෂණය",
     "categories": [
       {
-        "name": "Dharma Knowledge",
+        "name": "ධර්ම ඥානය",
         "papers": [
-          "Dharma Paper 2018",
-          "Dharma Paper 2019",
-          "Dharma Paper 2020",
-          "Dharma Paper 2018",
-          "Dharma Paper 2019",
-          "Dharma Paper 2020",
-          "Dharma Paper 2018",
-          "Dharma Paper 2019",
-          "Dharma Paper 2020",
-          "Dharma Paper 2018",
-          "Dharma Paper 2019",
-          "Dharma Paper 2020",
-          "Dharma Paper 2018",
-          "Dharma Paper 2019",
-          "Dharma Paper 2020"
+          {
+            "year": 2017,
+            "paper_title": "ධර්ම ඥානය 2017",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Dharma/2017%20TP%20Dharma.pdf"
+          },
+          {
+            "year": 2018,
+            "paper_title": "ධර්ම ඥානය 2018",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Dharma/2018%20TP%20Dharma.pdf"
+          },
+          {
+            "year": 2019,
+            "paper_title": "ධර්ම ඥානය 2019",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Dharma/2019%20TP%20Dharma.pdf"
+          },
+          {
+            "year": 2020,
+            "paper_title": "ධර්ම ඥානය 2020",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Dharma/2020%20TP%20Dharma.pdf"
+          },
+          {
+            "year": 2021,
+            "paper_title": "ධර්ම ඥානය 2021",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Dharma/2021%20TP%20Dharma.pdf"
+          },
+          {
+            "year": 2022,
+            "paper_title": "ධර්ම ඥානය (2022/2023)",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Dharma/2022%20TP%20Dharma.pdf"
+          },
+          {
+            "year": 2024,
+            "paper_title": "ධර්ම ඥානය 2024",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Dharma/2024%20TP%20Dharma.pdf"
+          }
         ]
       },
       {
-        "name": "Disciple Knowledge",
+        "name": "විනය ඥානය",
         "papers": [
-          "Disciple Paper 2018",
-          "Disciple Paper 2019",
-          "Disciple Paper 2020"
+          {
+            "year": 2017,
+            "paper_title": "විනය ඥානය 2017",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Winaya/2017%20TP%20Winaya.pdf"
+          },
+          {
+            "year": 2018,
+            "paper_title": "විනය ඥානය 2018",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Winaya/2018%20TP%20Winaya.pdf"
+          },
+          {
+            "year": 2019,
+            "paper_title": "විනය ඥානය 2019",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Winaya/2019%20TP%20Winaya.pdf"
+          },
+          {
+            "year": 2020,
+            "paper_title": "විනය ඥානය 2020",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Winaya/2020%20TP%20Winaya.pdf"
+          },
+          {
+            "year": 2021,
+            "paper_title": "විනය ඥානය 2021",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Winaya/2021%20TP%20Winaya.pdf"
+          },
+          {
+            "year": 2022,
+            "paper_title": "විනය ඥානය (2022/2023)",
+            "link": ""
+          },{
+            "year": 2024,
+            "paper_title": "විනය ඥානය 2024",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Winaya/2024%20TP%20WInaya.pdf"
+          }
         ]
       },
       {
-        "name": "Normal Knowledge",
+        "name": "සාමාන්‍ය ඥානය",
         "papers": [
-          "Normal Paper 2018",
-          "Normal Paper 2019",
-          "Normal Paper 2020"
+          {
+            "year": 2017,
+            "paper_title": "සාමාන්‍ය ඥානය 2017",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Samanya/2017%20TP%20Samanya.pdf"
+          },{
+            "year": 2018,
+            "paper_title": "සාමාන්‍ය ඥානය 2018",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Samanya/2018%20TP%20Samanya.pdf"
+          },
+          {
+            "year": 2019,
+            "paper_title": "සාමාන්‍ය ඥානය 2019",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Samanya/2019%20TP%20Samanya.pdf"
+          },
+          {
+            "year": 2020,
+            "paper_title": "සාමාන්‍ය ඥානය 2020",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Samanya/2020%20TP%20Samanya.pdf"
+          },
+          {
+            "year": 2021,
+            "paper_title": "සාමාන්‍ය ඥානය 2021",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Samanya/2021%20TP%20Samanya.pdf"
+          },
+          {
+            "year": 2022,
+            "paper_title": "සාමාන්‍ය ඥානය (2022/2023)",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Samanya/2023%20TP%20Samanya.pdf"
+          },
+          {
+            "year": 2024,
+            "paper_title": "සාමාන්‍ය ඥානය 2024",
+            "link": "https://raw.githubusercontent.com/Chamindu456/PDFReady/d1096e17e671deadff6777d69e578fdc9a6c9f6c/Papers/TP/Samanya/2024%20TP%20Samanya.pdf"
+          }
         ]
       }
     ]
@@ -44,27 +126,102 @@
     "title": "ත්‍රිපිටකාචාර්ය උපාධි පරීක්ෂණය",
     "categories": [
       {
-        "name": "Saddharmacharya",
+        "name": "සද්ධර්මචාර්ය",
         "papers": [
-          "Saddharmacharya Paper 2018",
-          "Saddharmacharya Paper 2019",
-          "Saddharmacharya Paper 2020"
+            {
+            "year": 2018,
+            "part": 1,
+            "paper_title": "සද්ධර්මචාර්ය 2018 1 - කොටස",
+            "link": ""
+          },
+          {
+            "year": 2018,
+            "part": 2,
+            "paper_title": "සද්ධර්මචාර්ය 2018 2 - කොටස",
+            "link": ""
+          },
+          {
+            "year": 2018,
+            "part": 3,
+            "paper_title": "සද්ධර්මචාර්ය 2018 3 - කොටස",
+            "link": ""
+          },
+          {
+            "year": 2019,
+            "part": 1,
+            "paper_title": "සද්ධර්මචාර්ය 2019 1 - කොටස",
+            "link": ""
+          },
+          {
+            "year": 2019,
+            "part": 2,
+            "paper_title": "සද්ධර්මචාර්ය 2019 2 - කොටස",
+            "link": ""
+          },
+          {
+            "year": 2019,
+            "part": 3,
+            "paper_title": "සද්ධර්මචාර්ය 2019 3 - කොටස",
+            "link": ""
+          },
+          {
+            "year": 2020,
+            "part": 1,
+            "paper_title": "සද්ධර්මචාර්ය 2020 1 - කොටස",
+            "link": ""
+          },
+          {
+            "year": 2020,
+            "part": 2,
+            "paper_title": "සද්ධර්මචාර්ය 2020 2 - කොටස",
+            "link": ""
+          },
+          {
+            "year": 2020,
+            "part": 3,
+            "paper_title": "සද්ධර්මචාර්ය 2020 3 - කොටස",
+            "link": ""
+          }
         ]
       },
       {
-        "name": "Vinayacharaya",
+        "name": "ව්නයචාර්ය",
         "papers": [
-          "Vinayacharaya Paper 2018",
-          "Vinayacharaya Paper 2019",
-          "Vinayacharaya Paper 2020"
+          {
+            "year": 2018,
+            "paper_title": "ව්නයචාර්ය පත්‍රය 2018",
+            "link": ""
+          },
+          {
+            "year": 2019,
+            "paper_title": "ව්නයචාර්ය පත්‍රය 2019",
+            "link": ""
+          },
+          {
+            "year": 2020,
+            "paper_title": "ව්නයචාර්ය පත්‍රය 2020",
+            "link": ""
+          }
         ]
       },
       {
-        "name": "Abhidharmacharaya",
+        "name": "අභිධර්මචාර්ය",
         "papers": [
-          "Abhidharmacharaya Paper 2018",
-          "Abhidharmacharaya Paper 2019",
-          "Abhidharmacharaya Paper 2020"
+          {
+            "year": 2018,
+            "paper_title": "අභිධර්මචාර්ය පත්‍රය 2018",
+            "link": ""
+          },
+          {
+            "year": 2019,
+            "paper_title": "අභිධර්මචාර්ය පත්‍රය 2019",
+            "link": ""
+          },
+          {
+            "year": 2020,
+            "paper_title": "අභිධර්මචාර්ය පත්‍රය 2020",
+            "link": ""
+          }
         ]
       }
     ]
@@ -73,27 +230,63 @@
     "title": "ත්‍රිපිටක විශාරද උපාධි පරීක්ෂණව",
     "categories": [
       {
-        "name": "Saddharmacharya",
+        "name": "සද්ධර්මචාර්ය",
         "papers": [
-          "Saddharmacharya Paper 2018",
-          "Saddharmacharya Paper 2019",
-          "Saddharmacharya Paper 2020"
+          {
+            "year": 2018,
+            "paper_title": "සද්ධර්මචාර්ය Paper 2018",
+            "link": ""
+          },
+          {
+            "year": 2019,
+            "paper_title": "සද්ධර්මචාර්ය Paper 2019",
+            "link": ""
+          },
+          {
+            "year": 2020,
+            "paper_title": "සද්ධර්මචාර්ය Paper 2020",
+            "link": ""
+          }
         ]
       },
       {
-        "name": "Vinayacharaya",
+        "name": "ව්නයචාර්ය",
         "papers": [
-          "Vinayacharaya Paper 2018",
-          "Vinayacharaya Paper 2019",
-          "Vinayacharaya Paper 2020"
+          {
+            "year": 2018,
+            "paper_title": "ව්නයචාර්ය Paper 2018",
+            "link": ""
+          },
+          {
+            "year": 2019,
+            "paper_title": "ව්නයචාර්ය Paper 2019",
+            "link": ""
+          },
+          {
+            "year": 2020,
+            "paper_title": "ව්නයචාර්ය Paper 2020",
+            "link": ""
+          }
         ]
       },
       {
-        "name": "Abhidharmacharaya",
+        "name": "අභිධර්මචාර්ය",
         "papers": [
-          "Abhidharmacharaya Paper 2018",
-          "Abhidharmacharaya Paper 2019",
-          "Abhidharmacharaya Paper 2020"
+          {
+            "year": 2018,
+            "paper_title": "අභිධර්මචාර්ය Paper 2018",
+            "link": ""
+          },
+          {
+            "year": 2019,
+            "paper_title": "අභිධර්මචාර්ය Paper 2019",
+            "link": ""
+          },
+          {
+            "year": 2020,
+            "paper_title": "අභිධර්මචාර්ය Paper 2020",
+            "link": ""
+          }
         ]
       }
     ]
