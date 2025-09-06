@@ -34,10 +34,10 @@ export default function RootLayout() {
           <Stack initialRouteName="index" screenOptions={{ headerShown: false }}>
             <Stack.Screen name="(tabs)" />
             <Stack.Screen name="+not-found" />
+            <Stack.Screen name="(drawer)" />
           </Stack>
         </SafeAreaView>
       </LinearGradient>
-
     </ThemeProvider>
   );
 }

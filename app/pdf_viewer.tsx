@@ -2,7 +2,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import PDFViewerFromAsset from '@/components/custom/PDFViewer';
 import { useLocalSearchParams } from 'expo-router';
 
-export default function TabTwoScreen() {
+export default function PDFViewerScreen() {
   const { paperLink } = useLocalSearchParams<{ paperLink: string }>();
 
   return (
